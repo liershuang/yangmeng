@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+
+/*top导航*/
+
+.top_dh_bj{width:100%;background:#0350a7;}
+.top_dh ul{}
+.top_dh ul:after{content:""; display: block; height: 0; clear: both; visibility: hidden; font-size: 0; line-height: 0;}
+.top_dh ul li{float:left; position:relative;}
+.top_dh ul li:before { content: ""; position: absolute; left: -1px; top: calc((100% - 25px) / 2); z-index: 1; width: 2px; height: 25px; border-left: solid 1px #0761c7; border-right: solid 1px #003e83;}
+
+.top_dh ul li a{ display:block; color:#fff; font-size:18px; height:60px; line-height:60px; padding:0 40px;}
+.top_dh ul li a:hover {background: #0f8ae0;}
+.top_dh ul li.active a {background: #0f8ae0;}
+
+.top_dh ul li:hover .top_dh_ej{display:block;}
+.top_dh ul li .top_dh_ej{width:170px; display:none; text-align:center; margin-left:-85px; position:absolute; top:60px; left:50%; z-index:100;}
+.top_dh ul li .top_dh_ej ul li{position:relative; width:100%;}
+.top_dh ul li .top_dh_ej ul li:before { display:none;}
+.top_dh ul li .top_dh_ej ul li a{ width:100%; display:block; color:#fff; line-height:44px; height:44px; font-size:14px; background:rgba(43,43,43,0.7);padding: 0;}
+.top_dh ul li .top_dh_ej ul li:hover a{background:rgba(43,43,43,0.9);}
+
+.top_dh ul li .top_dh_ej ul li:hover .top_dh_sj{display:block;}
+.top_dh ul li .top_dh_ej ul li .top_dh_sj{width:170px; display:none; position:absolute; top:0; left:170px; z-index:100;}
+.top_dh ul li .top_dh_ej ul li .top_dh_sj ul li>a{display:block; color:#fff; line-height:44px; background:rgba(43,43,43,0.6);}
+.top_dh ul li .top_dh_ej ul li .top_dh_sj ul li:hover>a{background:rgba(43,43,43,0.9);}
+
+
+
+.sj_dh_kj{width:50px; float:right; transition:all 0.5s; display:none; margin-top:5px;}
+.sj_dh_kj img{width: 100%;margin-bottom: 30px;}
+.sj_dh_dj{width: 50px;height:40px;text-align: center;position: relative; z-index:3; background:#fff; cursor: pointer;}
+
+.sj_dh{width:100%; overflow:auto; text-align:center; padding-bottom:40px; background:#333; position:fixed; top:60px; left: 0px;bottom:0px; display: none; z-index:2;border-top: 1px #f3f3f3 solid;}
+.sj_dh a{width:100%; display:block; color:#fff; line-height: 30px; font-size:14px; padding:10px 0; border-bottom:1px #444 solid; transition: all 0.5s;}
+.sj_dh a:hover { color:#F30; }
+
+
+.sj_dh_dj span{width:25px;height:2px; background-color: rgba(0,0,0,1); position:absolute; left:calc((100% - 25px) / 2); top: calc((100% - 1px) / 2);}
+.sj_dh_dj span:nth-child(1){transform: translateY(0px) rotate(0deg);}
+.sj_dh_dj span:nth-child(2){transform: translateY(4px) rotate(0deg);}
+.sj_dh_dj span:nth-child(3){transform: translateY(12px) rotate(0deg);}
+	
+.sj_dh_dj-click span:nth-child(1){animation-duration: 0.5s;animation-fill-mode: both;animation-name: clickfirst;}		
+.sj_dh_dj-click span:nth-child(2){animation-duration: 0.5s;animation-fill-mode: both;animation-name: clicksecond;}
+.sj_dh_dj-click span:nth-child(3){animation-duration: 0.5s;animation-fill-mode: both;animation-name: clicksecond;}
+	
+
+
+@keyframes clickfirst {
+  0% {transform: translateY(4px) rotate(0deg);}
+
+  100% { transform: translateY(0) rotate(45deg); }
+}	
+
+
+
+@keyframes clicksecond {
+  0% { transform: translateY(-4px) rotate(0deg); }
+
+  100% { transform: translateY(0) rotate(-45deg); }
+}	
+
+.sj_dh_gb span:nth-child(1){animation-duration: 0.5s;animation-fill-mode: both;animation-name: outfirst;}		
+.sj_dh_gb span:nth-child(2){animation-duration: 0.5s;animation-fill-mode: both;animation-name: outsecond;}
+
+@keyframes outfirst {
+  0% { transform: translateY(0) rotate(-45deg); }
+
+  100% { transform: translateY(-4px) rotate(0deg); }
+}	
+
+
+
+@keyframes outsecond {
+  0% { transform: translateY(0) rotate(45deg); }
+
+  100% { transform: translateY(4px) rotate(0deg);}
+}
+
+.sj_zyw{width:100%; color:#666; padding:20px 0; border-bottom:1px #f3f3f3 solid;}
+.sj_zyw a{width:auto !important; padding:0 20px; border-bottom:none !important; display: inline-block !important;}
+
+
+@media screen and (max-width:1200px){
+	.top_dh ul{margin-left:-80px;}
+	.top_dh ul li{margin-left:80px;}
+}
+
+@media screen and (max-width:960px){
+
+	.top_dh_bj{display:none;}
+	.sj_dh_kj{display:block;}
+	
+}
